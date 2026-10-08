@@ -1,0 +1,24 @@
+<%- include('partials/header') %>
+<div class="container py-4">
+  <nav aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="/">Home</a></li><li class="breadcrumb-item active" aria-current="page">About</li></ol></nav>
+  <h1 class="display-6 fw-bold mb-4">About Us</h1>
+  <div class="row g-4">
+    <div class="col-12 col-lg-8">
+      <div class="card service-card h-100"><div class="card-body p-4">
+        <h2 class="h5 fw-bold">About the application</h2>
+        <p class="text-muted">This is a simple web application built using Node.js and Express.js. It serves as a student portal where users can view information about the application, its services, and the developer.</p>
+        <div class="d-flex flex-wrap gap-2"><span class="badge badge-soft">Node.js</span><span class="badge badge-soft">Express.js</span><span class="badge badge-soft">EJS</span><span class="badge badge-soft">Bootstrap 5</span></div>
+      </div></div>
+    </div>
+    <div class="col-12 col-lg-4">
+      <div class="card service-card h-100 text-center"><div class="card-body p-4">
+        <img class="about-photo mx-auto d-block mb-3" src="/images/about-photo.jpg" alt="Photo of <%= student.name %>">
+        <small class="text-muted">Developed by</small>
+        <div class="fw-bold"><%= student.name %></div>
+        <small class="text-muted"><%= student.course %></small>
+      </div></div>
+    </div>
+  </div>
+  <a href="/" class="btn btn-outline-primary mt-4"><i class="bi bi-arrow-left" aria-hidden="true"></i> Back to Home</a>
+</div>
+<%- include('partials/footer') %>

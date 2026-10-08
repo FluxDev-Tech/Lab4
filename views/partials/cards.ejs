@@ -1,0 +1,18 @@
+<div class="row g-4">
+  <% services.forEach(function(s) { %>
+  <div class="col-12 col-md-6 col-lg-4">
+    <div class="card service-card h-100">
+      <div class="card-body d-flex flex-column">
+        <div class="icon-circle mb-3" aria-hidden="true"><i class="bi <%= s.icon %>"></i></div>
+        <h2 class="h5 card-title"><%= s.title %></h2>
+        <p class="card-text text-muted flex-grow-1"><%= s.text %></p>
+        <% if (typeof compact !== "undefined" && compact) { %>
+        <a href="/services" class="card-link-open" aria-label="Open <%= s.title %>">Open <i class="bi bi-arrow-right" aria-hidden="true"></i></a>
+        <% } else { %>
+        <a href="#" class="btn btn-primary align-self-start" aria-label="Open <%= s.title %>">Open</a>
+        <% } %>
+      </div>
+    </div>
+  </div>
+  <% }); %>
+</div>
